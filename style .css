@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: whitesmoke;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh; /* Uncommented for proper centering */
+}
+
+.wrapper .first-text {
+    font-size: 40px;
+    color: black;
+    font-weight: 500px;
+}
+
+.wrapper .sec-text {
+    font-size: 40px;
+    font-weight: 500px;
+    padding: 10px;
+    color: brown;
+    text-shadow: 0 0 10px brown;
+    position: relative; 
+    overflow: hidden; 
+    white-space: nowrap; 
+    top: 0;
+    animation: colorful 6s infinite;
+}
+@keyframes colorful {
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+.wrapper .sec-text::before {
+    content: ""; 
+    position: absolute;
+    left: 0; 
+    width: 400px; 
+    height: 40px; 
+    /*border-left: 2px solid brown;*/
+    background: whitesmoke;
+    animation: typing 1.5s steps(20) infinite alternate;
+}
+
+@keyframes typing {
+    100% {
+        left: 100%; 
+        margin: 0 -35px 0 35px;
+    }
+}
+.menu-bar ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 20px;
+}
+
+
+.menu-bar li {
+    width: 100%;
+}
+.menu-bar svg{
+    color: white;
+}
+
+.menu-bar a {
+    text-decoration: none;
+    display: block;
+    padding: 15px;
+    width: 100%;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+.menu-bar a:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+.menu-toggle{
+    display: flex;
+    justify-content: right;
+    padding: 20px;
+}
+/* SVG Icon Styling */
+.menu-toggle svg {
+    width: 30px;
+    height: 30px;
+    fill: black;
+}
+/* Center the play section */
+.play-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style the Play Button */
+.play-button {
+    background-color: red; /* Play button color */
+    color: white; /* White text */
+    font-size: 20px;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+/* Hover and Click Effects */
+.play-button:hover {
+    background-color: darkred;
+}
+
+.play-button:active {
+    transform: scale(0.95);
+}
+/*game*/
+.game {
+    width: 100%;
+    padding: 3%;
+    margin: 3% 0 0 0;
+    text-align: center;
+    min-height: 70vh;
+}
+.back{
+    display: flex;
+    justify-content: left;
+    padding: 20px;
+
+}
+.back svg{
+    fill: black;
+}
+/* Style for the color box */
+.color-box {
+    background-color: aquamarine;
+    color: black;
+    width: 100%;
+    padding: 3%;
+    margin: 3% 0 0 0;
+    font-size: 20px;
+}
+
+/* Centered Bold Text */
+.game p {
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/* Center the button container */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Styled Button */
+.game button {
+    background: red;
+    color: white;
+    font-weight: bold;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.game button:hover {
+    background: darkred;
+    transform: scale(1.05);
+}
+
+/* Center the square container */
+.square-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 columns */
+    gap: 10px;
+    padding: 15px;
+    place-items: center; /* Centers items properly */
+}
+
+/* Style for squares */
+.square {
+    width: 200px;
+    height: 100px;
+    background-color: purple;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover Effect */
+.square:hover {
+    background-color: darkviolet; /* Change color on hover */
+    transform: scale(1.1); /* Slightly increase size */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+}
+
+
+/* Responsive container */
+.container {
+    margin: 0 auto;
+    max-width: 300px;
+    width: 90%; /* Makes it responsive */
+    text-align: center;
+}
+
+/* Message Centering */
+.message {
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Border Fix */
+.border {
+    border: solid 0.5px grey;
+}
+
+/* Fix Hide Class */
+.game .hide {
+    display: none !important;
+}
+
+
+
+
+
+
+
+/*rules*/
+/* Style the rules section */
+.rules-section {
+    background: #f8f9fa; /* Light gray background */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 30px auto;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Rules Heading */
+.rules-section h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Rules List */
+.rules-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+/* Style each rule */
+.rules-list li {
+    background: white;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    color: #555;
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .rules-section {
+        width: 90%;
+        padding: 15px;
+    }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Game</title>
+    <link rel="stylesheet" href="style .css">
+</head>
+<body>
+     <!-- Back Toggle Button -->
+    <a href="index.html">
+        <div class="back">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/>
+            </svg>
+        </div>
+    </a>
+    <section class="game">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+            </div>
+            <section align="center">
+                <p data-testid="colorBox" class="color-box animated" align="center">
+                    Can you guess the color which is formed when these colors are mixed?
+                </p> <br>
+                <div class="colour-box" align="center">
+                    <button class="red">
+                    <p>Red:<strong><span id="r"></span>%</strong></p>
+                </button>
+                <button class="green">
+                    <p>Green:<strong><span id="g"></span>%</strong></p>
+                </button>
+                <button class="blue">
+                    <p>Blue:<strong><span id="b"></span>%</strong></p>
+                </button>
+                </div>
+
+            </section>
+
+        </div>
+
+    </div> <br>
+    <div class="container button-container" align="center">
+        <button class="button btn-success flip animated hide" type="reset" id="reset" onclick="window.location.reload()">
+            START AGAIN
+        </button>
+    </div>
+    <div class="message"><samp><h2 class="text"></h2></samp></div>
+    <div class="square-container">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+    </div>
+        
+    </div>
+</section>
+<script src="index.js"></script>
+</body>
+</html>
