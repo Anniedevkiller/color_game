@@ -6,6 +6,7 @@ function hideMenu(){
     const menu = document.querySelector('.menu ')
     menu.style.display = 'none'
 }
+
 var blocks = document.querySelectorAll(".square");
 var rField = document.getElementById("r");
 var gField = document.getElementById("g");

@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Desktop */
+    background-image: url(image/Premium\ Photo\ _\ Photo\ background\,\ background\ for\ photo\ shoot\,\ blue\ color\ background\,\ portrait\ backdrop.jpg);
+    background-size: cover;
+    /* Ensures the image covers the full body area */
+    background-position: center center;
+    /* Centers the image */
+    background-repeat: no-repeat;
+    /* Ensures the image doesn't repeat */
+    height: 100vh;
+    /* Full viewport height */
+    margin: 0;
+    /* Remove any default margin */
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+    body {
+
+        background-position: top center;
+        /* Adjust positioning */
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    body {
+        background-position: top center;
+    }
+}
+
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    /* Uncommented for proper centering */
+}
+
+.wrapper .first-text {
+    font-size: 40px;
+    color: whitesmoke;
+    font-weight: 500px;
+}
+
+.wrapper .sec-text {
+    font-size: 40px;
+    font-weight: 500px;
+    padding: 10px;
+    color: brown;
+    text-shadow: 0 0 10px brown;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    top: 0;
+    animation: colorful 6s infinite;
+}
+
+@keyframes colorful {
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.wrapper .sec-text::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    animation: typing 1.5s steps(20) infinite alternate;
+}
+
+@keyframes typing {
+    100% {
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+}
+.wrapper{
+    text-align: center;
+}
+
+
+.neu {
+    background: linear-gradient(145deg, #fff, #c4c6c9);
+    border-radius: 10%;
+    color: black;
+    /* White text */
+    font-size: 20px;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+    margin: 0 9px;
+
+}
+
+.play-section {
+    text-align: center;
+}
+
+/*game*/
+.game {
+    width: 100%;
+    text-align: center;
+    min-height: 70vh;
+}
+
+.back {
+    display: flex;
+    justify-content: left;
+    padding: 20px;
+
+}
+
+.back svg {
+    fill: whitesmoke;
+}
+
+/* Style for the color box */
+.color-box {
+    color: whitesmoke;
+    width: 100%;
+    padding: 3%;
+    font-size: 20px;
+}
+
+/* Centered Bold Text */
+.game p {
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/* Center the button container */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Styled Button */
+
+.game button {
+    background: red;
+    color: white;
+    font-weight: bold;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.green {
+    background-color: green !important;
+}
+
+.blue {
+    background-color: blue !important;
+}
+
+
+
+.game button:hover {
+    background: darkred;
+    transform: scale(1.05);
+}
+
+/* Center the square container */
+.square-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    padding: 10px;
+    width: 80%;
+    margin: 0 auto;
+    /* place-items: center; Centers items properly */
+}
+
+/* Style for squares */
+.square {
+    /* width: 200px; */
+    /* height: 100px; */
+    padding: 15%;
+    margin: 2px 5px;
+    background-color: purple;
+    border-radius: 3.5%;
+    /* display: flex; */
+    /* justify-content: center; */
+    /*align-items: center;*/
+    color: white;
+    font-size: 18px;
+    /*font-weight: bold;*/
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover Effect */
+.square:hover {
+    background-color: darkviolet;
+    /* Change color on hover */
+    transform: scale(1.1);
+    /* Slightly increase size */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    /* Stronger shadow */
+}
+
+
+/* Responsive container */
+.container {
+    margin: 0 auto;
+    max-width: 80%;
+    width: 90%;
+    /* Makes it responsive */
+    text-align: center;
+}
+
+/* Message Centering */
+.message {
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Border Fix */
+.border {
+    border: solid 0.5px grey;
+}
+
+/* Fix Hide Class */
+.game .hide {
+    display: none !important;
+}
+
+/* Modal Background */
+.modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+    background: white;
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+
+/* Heading */
+.modal-content h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Rules Text */
+.modal-content p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+    text-align: left;
+}
